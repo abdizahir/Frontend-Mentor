@@ -1,87 +1,124 @@
-body {
-    font-family: "Figtree", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: bold;
-    font-style: normal;
-    background-color:  hsl(47, 88%, 63%);
-    /* width: 1080px; */
-    
+@charset "utf-8";
+@font-face {
+    font-family: Figtree;
+    src: url(./assets/fonts/Figtree-VariableFont_wght.ttf)
 }
 
-/* @media() */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-.blog {
+html {
+    font-family: 'Figtree';
+    font-size: 16px;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(47, 88%, 63%);
+}
+
+main{
+    width: 327px;
+    margin: auto;
+    padding: 24px;
+    border: 1px solid #121212;
+    border-radius: 20px;
     background-color: #fff;
-    max-width: 335px;
-    text-align: center;
-    margin: 100px auto;
-    border-radius: 15px; 
-    border: 1px solid #000;
-    box-shadow: 8px 8px #000;
-    max-height: 515px;
+    box-shadow: 10px 10px #121212;
     pointer-events: none;
 }
-@media(max-width: 576px) {
-    .blog {
-        max-width: 350px;
-        /* max-height: 500px; */
-    }
+main:hover {
+    box-shadow: 15px 15px #121212;
 }
-.blog:hover {
-    box-shadow: 15px 15px #000;
-}
-.blog .container {
-    padding: 20px;
-}
-.img-box img {
-    border-radius: 12px;
+main > img {
     width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
 }
-.info-box {
-    padding-right: 10px;
+
+main div {
+    margin-top: 24px;
 }
-.text-box {
-    text-align: left;
-}
-.text-box h5 {
-    font-weight: bold;
+
+main .main-body button {
+    font-size: 0.8rem;
+    font-weight: 800;
+    padding: 4px 12px;
+    border:  none;
+    border-radius: 4px;
     background-color: hsl(47, 88%, 63%);
-    display: inline-block;
-    padding: 5px 12px;
-    font-size: 18px;
-    margin-bottom: 0;
-    border-radius: 5px;
 }
-.text-box h2 {
+main .main-body p,
+main .main-body h1 {
+    margin-top: 12px;
+}
+
+.main-body p:first-of-type {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: gray;
+}
+
+.main-body h1 {
+    font-size: 1.3rem;
+    font-weight: 800;
     cursor: pointer;
     pointer-events: auto;
 }
-.text-box h2:hover {
+.main-body h1:hover{
     color: hsl(47, 88%, 63%);
 }
-.text-box p:first-of-type {
-    font-size: 14px;
+.main-body p:last-of-type {
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: gray;
 }
-.text-box h2 {
-    /* font-weight: bold; */
-    font-size: 20px;
-}
-.text-box p:last-of-type{
-    color:  hsl(0, 0%, 50%);
-    font-size: 14px;
-    line-height: 1.4;
-}
-.favicon-box {
+
+main .main-user {
     display: flex;
     align-items: center;
-    /* margin-top: 0; */
 }
-.favicon-box img{
-    padding-right: 20px;
-    width: 40px;
-    height: 40px;
+
+.main-user img {
+    width: 32px;
+    height: 32px;
 }
-.favicon-box h5{
-    font-size: 18px;
-    font-weight: bold;
+
+.main-user p {
+    font-weight: 900;
+    margin-left: 12px;
+}
+
+.attribution {
+    font-size: 1rem;
+    text-align: center;
+    color: #121212;
+    margin-bottom: 10px;
+    display: none;
+}
+
+@media (min-width: 720px) {
+    main{
+        width: 384px;
+    }
+    main p:first-of-type{
+        font-size: 1rem;
+        font-weight: 800;
+    }
+    main h1{
+        font-size: 1.5rem;
+    }
+    main p:last-of-type {
+        font-size: 1.1rem;
+    }
+    .attribution {
+        display: block;
+    }
 }
