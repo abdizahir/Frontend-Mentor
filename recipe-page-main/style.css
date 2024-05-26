@@ -124,14 +124,9 @@ body {
     font-weight: bold;
 }
 
-.instruc ol li {
-    /* font-family: "outfit"; */
-    /* font-family: "young-serif"; */
-}
 .instruc ol li span {
     padding-left: 20px;
     color: var(--Wenge-Brown);
-    /* color: gray; */
     font-size: 1.1rem;
     display: block;
     line-height: 1.5;
@@ -150,13 +145,6 @@ body {
     color: var(--Wenge-Brown);
     margin-bottom: 15px;
 }
-
-.background .nutri table {
-    
-    /* display: block; */
-    /* min-width: 100%; */
-}
-
 .background .nutri table tr {
     display: flex;
     align-items: center;
