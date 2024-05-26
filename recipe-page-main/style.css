@@ -1,0 +1,190 @@
+@charset "utf-8";
+@font-face {
+    font-family: "young-serif";
+    src: url("./assets/fonts/young-serif/YoungSerif-Regular.ttf");
+}
+@font-face {
+    font-family: "outfit";
+    src: url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.outfit {
+}
+:root {
+    --Nutmeg: hsl(14, 45%, 36%);
+    --Dark-Raspberry: hsl(332, 51%, 32%);
+    --White: hsl(0, 0%, 100%);
+    --Rose-White: hsl(330, 100%, 98%);
+    --Eggshell: hsl(30, 54%, 90%);
+    --Light-Grey: hsl(30, 18%, 87%);
+    --Wenge-Brown: hsl(30, 10%, 34%);
+    --Dark-Charcoal: hsl(24, 5%, 18%);
+}
+body {
+    display: grid;
+    place-items: center;
+    background-color: var(--Eggshell);
+    margin: 100px auto;
+}
+.body {
+    font-size: 16px;
+}
+
+
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 30px;
+    background-color: var(--Rose-White);
+    width: min(calc(100% - 4rem), 45rem);
+    margin: auto;
+    border-radius: 0.75rem;
+}
+
+.background .page .page-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+.background .page .page-header img{
+    width: 100%;
+    border-radius: 0.75rem;
+}
+.background .page-header figcaption h1{
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    font-family: "young-serif";
+} 
+
+.background .page-header figcaption p {
+    color: var(--Dark-Charcoal);
+    font-size: 1rem;
+    font-family: "outfit";
+}
+
+.background .pro-time {
+    padding: 20px;
+    margin-left: 20px;
+    background-color: hsl(332deg 51% 32% / 9%);
+    font-family: "outfit";
+    border-radius: 5px;
+}
+
+.pro-time h5 {
+    color: var(--Dark-Raspberry);
+    margin-bottom: .5rem;
+    font-size: 16px;
+}
+.pro-time ul {
+    margin-left: 20px;
+}
+.pro-time ul li {
+    margin-left: 7px;
+    font-weight: 600;
+}
+.pro-time ul li p {
+    margin-left: 10px;
+}
+.pro-time ul li span {
+    font-weight: normal;
+}
+.h-2 {
+    color: var(--Dark-Raspberry);
+    margin-bottom: 15px;
+}
+.background .ingred {
+    border-bottom: 1px solid var(--Light-Grey);
+}
+.ingred ul {
+    margin-left: 20px;
+}
+.ingred ul li:last-of-type {
+    margin-bottom: 20px;
+}
+.ingred ul li span{
+    margin-left: 10px;
+    font-size: 1.1rem;
+}
+
+/* instruction */
+.background .instruc {
+    border-bottom: 1px solid var(--Light-Grey);
+}
+
+.instruc ol {
+    margin-left: 20px;
+    color: var(--Dark-Raspberry);
+    font-weight: bold;
+}
+
+.instruc ol li {
+    /* font-family: "outfit"; */
+    /* font-family: "young-serif"; */
+}
+.instruc ol li span {
+    padding-left: 20px;
+    color: var(--Wenge-Brown);
+    /* color: gray; */
+    font-size: 1.1rem;
+    display: block;
+    line-height: 1.5;
+    font-weight: normal;
+}
+.instruc ol li span b{
+    color: var(--Dark-Charcoal);
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.instruc ol li:last-of-type {
+    margin-bottom: 20px;
+}
+
+.background .nutri p{
+    color: var(--Wenge-Brown);
+    margin-bottom: 15px;
+}
+
+.background .nutri table {
+    
+    /* display: block; */
+    /* min-width: 100%; */
+}
+
+.background .nutri table tr {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--Light-Grey);
+    margin-bottom: 45px;
+    padding-left: 25px;
+}
+.background .nutri table tr td {
+    margin-bottom: 20px;
+}
+.background .nutri table tr td:first-of-type {
+    margin-right: 250px;
+}
+@media (max-width: 576px) {
+    .background .nutri table tr td:first-of-type {
+        margin-right: 100px;
+    }
+    .background .page-header figcaption p, 
+    .pro-time ul li,
+    .ingred ul li span, 
+    .instruc ol li span {
+        font-size: 0.8rem;
+    }
+    body {
+        margin: 10px auto;
+    }
+}
+.background .nutri table tr td:last-of-type {
+    color: var(--Dark-Raspberry);
+    font-weight: 700;
+}
