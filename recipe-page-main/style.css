@@ -152,14 +152,14 @@ body {
     display: flex;
     align-items: center;
     border-bottom: 1px solid var(--Light-Grey);
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     padding-left: 25px;
     /* width: 660px; */
 }
 .background .nutri table tr td {
     margin-bottom: 20px;
     width: 50%;
-    height: 2.5rem;
+    height: 2rem;
     text-align: left;
 }
 @media (max-width: 576px) {
