@@ -140,23 +140,27 @@ body {
 .instruc ol li:last-of-type {
     margin-bottom: 20px;
 }
-
+.nutri table{
+    width: 100%;
+    border-collapse: collapse;
+}
 .background .nutri p{
     color: var(--Wenge-Brown);
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 .background .nutri table tr {
     display: flex;
     align-items: center;
     border-bottom: 1px solid var(--Light-Grey);
-    margin-bottom: 45px;
+    margin-bottom: 50px;
     padding-left: 25px;
+    /* width: 660px; */
 }
 .background .nutri table tr td {
     margin-bottom: 20px;
-}
-.background .nutri table tr td:first-of-type {
-    margin-right: 250px;
+    width: 50%;
+    height: 2.5rem;
+    text-align: left;
 }
 @media (max-width: 576px) {
     .background .nutri table tr td:first-of-type {
