@@ -98,7 +98,7 @@ body {
     border-top: 3px solid #03a9f4;
 }
 .main .cards .card4 {
-    border-top: 3px solid #ff9800;cd
+    border-top: 3px solid #ff9800;
 }
 
 .attribution {
@@ -121,7 +121,6 @@ body {
     }
     .head article p:last-of-type {
         font-size: .9em;
-        margin-bottom: 2em;
 
     }
     .main .cards {
