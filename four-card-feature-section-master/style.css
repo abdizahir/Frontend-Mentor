@@ -34,14 +34,14 @@ body {
     color: var(--Grayish-Blue);
     font-size: 1.2em;
     font-weight: 300;
-    margin-top: 2em;
+    margin-top: 2.2em;
 }
 
 .head article h2 {
     font-family: 700;
     font-size: 1.2em;
     color: var(--Very-Dark-Blue);
-    margin-bottom: 0.3em;
+    margin-bottom: 1em;
 }
 
 .head article p:last-of-type {
