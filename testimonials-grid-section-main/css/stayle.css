@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+body {
+    /* height: 100vh; */
+    background-color: var(--Light-grayish-blue);
+    font-family: 'Barlow Semi Condensed';
+}
+
+.main {
+    padding: 0 1rem;
+}
+
+.main .testimon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.testimon .article1 {
+    margin-top: 3em;
+    background-color: var(--Moderate-violet);
+    padding: 2em;
+    position: relative;
+}
+.testimon .article1 > img {
+    position: absolute;
+    right: .5em;
+    top: 0;
+    z-index: 1;
+    width: 7.6em;
+    height: 7.6em;
+}
+.testimon .article1 .head {
+    position: relative;
+    z-index: 3;
+}
+.testimon .article1 .content h2{
+    position: relative;
+    z-index: 3;
+    font-size: 1.3em;
+}
+.testimon .card {
+    padding: 2em;
+}
+.testimon .article2 {
+    background-color: var(--Very-dark-grayish-blue);
+    
+}
+
+.testimon .article3 {
+    background-color: var(--White);
+}
+
+.testimon .article4 {
+    background-color: var(--Very-dark-blackish-blue);
+}
+
+.testimon .article5 {
+    background-color: var(--White);
+    margin-bottom: 1em;
+}
+
+.testimon .card .content h2 {
+    font-size: 1.2em;
+    color: var(--Light-grayish-blue);
+}
+
+.testimon .article3 .content h2, 
+.testimon .article5 .content h2 {
+    color: var(--Very-dark-grayish-blue);
+}
+
+.testimon .card .content p {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.testimon .card .head .info h4 {
+    color: var(--Very-dark-grayish-blue);
+}
+
+.testimon .article2 .head .info h4, 
+.testimon .article4 .head .info h4 {
+    color: var(--Light-gray);
+}
+
+.main .card {
+    border-radius: .6em;
+}
+
+.main .card .head {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 1.3em;
+}
+
+.main .card .head img {
+    border: 3px solid var(--Light-gray);
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+}
+
+.card .head .info h4{
+    color: var(--Light-gray);
+    margin-bottom: 0.4em;
+    font-size: .8em;
+}
+.card .head .info p{
+    color: var(--Light-gray);
+    font-size: .7em;
+}
+
+.card .content h2 {
+    color: var(--White);    
+    font-size: 1.09em;
+    margin-bottom: 1em;
+}
+.testimon .card .content .content-p{
+    font-size: .85em;
+    color: var(--Light-gray);
+}
+
+.attribution {
+    padding: 1em 0;
+}
+
+@media(min-width: 786px) {
+    .main {
+        padding: 1em;
+    }
+    .main .testimon{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2em;
+        align-items: unset;
+    }
+    .testimon .article1 {
+        margin-top: 0;
+    }
+}
+
+
+@media(min-width: 1190px) {
+    .main {
+        padding: 5em;
+    }
+    .main .testimon {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 'article1 article1 article2 article5' 
+        'article3 article4 article4 article5';
+        gap: 2em;
+        align-items: unset;
+    }
+    .testimon .article1 {
+        margin-top: 0;
+        grid-area: article1;
+    } 
+    .testimon .article2 {
+        grid-area: article2;
+    }
+    .testimon .article3 {
+        grid-area: article3;
+    }
+    .testimon .article4 {
+        grid-area: article4;
+    }
+    .testimon .article5 {
+        margin: 0;
+        grid-area: article5;
+    } 
+}
