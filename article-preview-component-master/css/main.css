@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    min-height: 100vh;
+    font-family: "Manrope", sans-serif;
+    background-color: var(--Light-Grayish-Blue);
+}
+
+img {
+    max-inline-size: 100%;
+    block-size: auto;
+    max-width: 100%;
+    display: block;
+}
+
+.main {
+    max-width: 43rem;
+    margin: 4rem auto;
+    padding: 1.5em;
+}
+
+.main picture img {
+    border-top-left-radius: .6em;
+    border-top-right-radius: .6em;
+}
+
+.main .prod-details {
+    background-color: white;
+    border-bottom-right-radius: .6em;
+    border-bottom-left-radius: .6em;
+}
+.main .prod-details .prod-text {
+    padding: 2rem 2em 1em;
+}
+.main .artticle-card .share {
+    margin-top: 1em;
+    background-color: var(--Very-Dark-Grayish-Blue);
+    padding: 1em;
+    border-bottom-left-radius: .6em;
+    border-bottom-right-radius: .6em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.main .artticle-card .share .icons {
+    font-size: 1.2em;
+    color: white;
+    display: flex;
+    gap: .8em;
+}
+
+.main .artticle-card .share .icons .span-txt {
+    color: var(--Grayish-Blue);
+    font-size: .8em;
+}
+
+.main .artticle-card .share .fa-share {
+    color: white;
+    background-color: var(--Desaturated-Dark-Blue);
+    padding: .6em;
+    border-radius: 50%;
+}
+
+.main .prod-details .prod-text h2{
+    font-size: .8em;
+    margin-bottom: 1em;
+    color: var(--Very-Dark-Grayish-Blue);
+}
+
+.main .prod-details .prod-text p {
+    font-size: 13.4px;
+    color: var(--Desaturated-Dark-Blue);
+}
+
+.main .prod-details .person-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    align-items: center;
+    margin-top: 1em;
+    padding: 1em;
+
+}
+
+.info-box {
+    display: flex;
+    gap: 1em;
+}
+
+.main .prod-details .person-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.main .prod-details .person-info .info-text h5{
+    font-size: .7em;
+    color: var(--Very-Dark-Grayish-Blue);
+}
+.main .prod-details .person-info .info-text span{
+    color: var(--Desaturated-Dark-Blue);
+    font-size: .7em;
+}
+
+.main .prod-details .person-info .btn {
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.main .prod-details .person-info i {
+    background-color: var(--Light-Grayish-Blue);
+    padding: 1em;
+    text-align: center;
+    border-radius: 50%;
+    font-size: .9em;
+    color: var(--Desaturated-Dark-Blue);
+}
+
+.attribution {
+    font-size: .9em;
+    padding: 1em 0;
+}
+
+@media screen and (min-width: 40em) {
+    .main .artticle-card{
+        width: 48em; 
+    }
+    .artticle-card {
+        display: flex;
+    }
+    
+    .main .artticle-card picture img {
+        height: 100%;
+        width: auto;
+        object-fit: fill;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: .6em;
+    }
+
+    .main .prod-details {
+        border-top-right-radius: .6em;
+        border-bottom-left-radius: 0;
+        padding: 1em;
+        position: relative;
+
+    }
+    .main .prod-details .prod-text {
+        padding: 0;
+    }
+    .main .artticle-card .prod-details h2 {
+        font-size: 1.7em;
+        margin-bottom: .6em;
+    }
+    .main .artticle-card .prod-details p  {
+        margin-bottom: 1em;
+        font-size: 1em;
+    }
+    .main .artticle-card .share {
+        height: 2.5em;
+        position: absolute;
+        transform: translate(50%, 50%);
+        left: 16.6em;
+        top: 6.6em;
+        border-radius: .6em;
+    }
+
+    .main .artticle-card .share::before {
+        content: "";
+        position: absolute;
+        border: 10px solid;
+        border-color: var(--Very-Dark-Grayish-Blue) transparent transparent transparent;
+        right: 50%;
+        bottom: -1.26em;
+        transform: translateX(50%);
+    }
+    .main .artticle-card .share .fa-share {
+        position: absolute;
+        bottom: -3em;
+        left: 5em;
+        font-size: 1em;
+    }
+    .info-box {
+        gap: .7em;
+    }
+}
