@@ -18,7 +18,6 @@
 body {
     min-height: 100vh;
     font-family: "Roboto", sans-serif;
-    background-color: var(--White);
 }
 
 img {
@@ -35,6 +34,7 @@ img {
 .img-desktop {
     display: none;
 }
+
 
 
 .main .card-info, .main .success {
@@ -129,38 +129,56 @@ img {
     background-color: var(--Tomato);
 }
 
+.attribution {
+    font-size: .9em;
+    text-align: center; 
+    padding-bottom: 1.3em;
+}
+
+
 
 @media screen and (min-width: 40em) {
+    body {
+        background-color: var(--Dark-Slate-Grey);
+    }
+    
+    .main {
+        max-width: 45em;
+        margin: auto;
+    }
     .main .card {
         display: flex;
         flex-direction: row-reverse;
-        justify-content: center;
+        justify-content: space-between;
+        gap: 2em;
+        background-color: var(--White);
+        margin: 3em auto 0;
+        border-radius: 1em;
     }
     .img-mobile {
         display: none;
     }
     .img-desktop {
         display: block;
-        padding: 2em 0;
-        height: fit-content;
-        height: 550px;
+        padding: 1em 1em 0 0;
+        height: 30em;
     }
     .main .card-info {
         margin: 2em 0;
-        padding: 2.3em 0 1.6em  1.5em;
+        padding: 2em 0 1.6em  1.5em;
     }
     .main .card .card-info h2 {
-        font-size: 3em;
+        font-size: 2em;
     }
 
     .main .card .card-info > p {
         font-size: 1em;
+        margin-bottom: 1em;
         width: 90%;
     }
 
     .main .card .card-info .features .features-content p {
-        font-size: 1em;
-        margin-bottom: .8em;
+        font-size: .9em;
     }
 
     .main .card .card-info form input[type=email] {
@@ -170,12 +188,15 @@ img {
     .main .card .card-info form input, 
     .main .success button, 
     .main .card .card-info form button {
-        width: 85%;
+        padding: .9em;
     }
 
     .main .success  {
-        width: 50%;
-        margin: auto;
+        width: 35em;
+        margin: 3em auto;
+        border-radius: 1em;
+        background-color: var(--White);
+        padding: 3em;
     }
     
     .main .success img {
@@ -183,11 +204,11 @@ img {
     }
 
     .main .success h2 {
-        font-size: 3.6em;
+        font-size: 3.5em;
         margin-top: .6em;
     }
     .main .success p {
-        font-size: 1.6em;
+        font-size: 0 1em;
     }
     .main .success button {
         margin-top: 2em;
@@ -196,19 +217,7 @@ img {
 
     .attribution {
         padding-bottom: 0;
+        margin-top: 1.5em;
+        color: var(--White);
     }
-}
-
-
-
-
-
-
-
-
-.attribution {
-    font-size: .9em;
-    font-size: 1em; 
-    text-align: center; 
-    padding-bottom: 1.3em;
 }
