@@ -118,7 +118,7 @@ img {
 }
 
 .main .success button {
-    background-color: var(--Dark-Slate-Grey);
+    background-color: var(--Charcoal-Grey);
     color: var(--White);
     margin-top: 8em;
     font-size: 1.1em;
@@ -139,7 +139,7 @@ img {
 
 @media screen and (min-width: 40em) {
     body {
-        background-color: var(--Dark-Slate-Grey);
+        background-color: var(--Charcoal-Grey);
     }
     
     .main {
