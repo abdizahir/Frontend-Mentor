@@ -153,7 +153,7 @@ img {
         gap: 2em;
         background-color: var(--White);
         margin: 3em auto 0;
-        border-radius: 1em;
+        border-radius: 1.3em;
     }
     .img-mobile {
         display: none;
@@ -194,7 +194,7 @@ img {
     .main .success  {
         width: 35em;
         margin: 3em auto;
-        border-radius: 1em;
+        border-radius: 1.3em;
         background-color: var(--White);
         padding: 3em;
     }
