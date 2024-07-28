@@ -31,6 +31,10 @@ img {
     display: none;
 }
 
+.img-mobile {
+    width: 100%;
+}
+
 .img-desktop {
     display: none;
 }
