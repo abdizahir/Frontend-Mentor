@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Blue: hsl(246, 80%, 60%);
+    --Light-red-work: hsl(15, 100%, 70%);
+    --Soft-blue-play: hsl(195, 74%, 62%);
+    --Light-red-study: hsl(348, 100%, 68%);
+    --Lime-green-exercise: hsl(145, 58%, 55%);
+    --Violet-social: hsl(264, 64%, 52%);
+    --Soft-orange-self-care: hsl(43, 84%, 65%);
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Rubik", sans-serif;
+    background-color: var(--Very-dark-blue);
+    color: white;
+}
+
+img {
+    max-inline-size: 100%;
+    block-size: auto;
+    max-width: 100%;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2em;
+    padding: 4em 1.5em;
+    z-index: 5;
+    /* position: relative; */
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.main .work-card .img-container {
+    background-color: var(--Light-red-work);
+}
+.main .play-card .img-container {
+    background-color: var(--Soft-blue-play);
+}
+.main .study-card .img-container {
+    background-color: var(--Light-red-study);
+}
+.main .exercies-card .img-container {
+    background-color: var(--Lime-green-exercise);
+}
+
+.main .social-card .img-container {
+    background-color: var(--Violet-social);
+}
+
+.main .selfcare-card .img-container {
+    background-color: var(--Soft-orange-self-care);
+}
+
+.main .main-card .card-info {
+    background-color: var(--Blue);
+    display: flex;
+    align-items: center;
+    gap: 1.7em;
+    padding: 2em;
+    border-radius: .9em;
+}
+
+.main .main-card .card-info img {
+    width: 3.75em;
+    height: 3.75em;
+    outline: 3px solid white;
+    border-radius: 50%;
+}
+
+.main .main-card .card-info .text-info p{
+    margin-bottom: .4em;
+    color: var(--Pale-Blue);
+}
+.main .main-card .card-info .text-info h4{
+    font-weight: 200;
+    font-size: 1.4em;
+    color: white;
+}
+
+.main .main-card .time-line {
+    background-color: var(--Dark-blue);
+    border-bottom-right-radius: .9em;
+    border-bottom-left-radius: .9em;
+}
+
+.main .main-card .time-line .timeline-txt {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.6em;
+}
+
+.main .main-card .time-line .timeline-txt button {
+    color: white;
+    background-color: var(--Dark-blue);
+    border: none;
+    cursor: pointer;
+    color: var(--Desaturated-blue);
+}
+
+.main .main-card .time-line .timeline-txt .active {
+    color: white;
+}
+
+.main .img-container {
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: .9em;
+    height: 40%;
+}
+.main .img-container img {
+    position: relative;
+    left: 15em;
+    z-index: 2;
+    bottom: .8em;
+}
+
+.main .card-info {
+    background-color: var(--Dark-blue);
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding: 1.6em;
+    border: none;
+    border-radius: .9em;
+    height: 70%;
+    width: 100%;
+    position: relative;
+    top: -2em;
+    z-index: 3;
+}
+.main .card-info:hover {
+    background-color: var(--Desaturated-blue);
+    cursor: pointer;
+}
+.main .card-info .current-info h5{
+    font-size: 1em;
+    margin-bottom: .7em;
+}
+
+.main .card-info .current-info p {
+    font-size: 1.5em;
+    font-weight: 100;
+}
+
+.main .card-info .Previous-info p{
+    color: var(--Pale-Blue);
+}
+
+.main .card-info .Previous-info span,  
+.main .card-info .Previous-info span::before, 
+.main .card-info .Previous-info span::after{
+    position: absolute;
+    width: .4em;
+    height: .4em;
+    border-radius: 50%;
+    background-color: var(--Pale-Blue);
+}
+
+.main .card-info .Previous-info span {
+    top: 3em;
+    right: 2.5em;
+}
+.main .card-info .Previous-info span::before, 
+.main .card-info .Previous-info span::after {
+    content: "";
+}
+
+.main .card-info .Previous-info span::before {
+    right: .7em;
+}
+.main .card-info .Previous-info span::after {
+    left: .7em;
+}
+
+
+/* medium */
+@media screen and (min-width: 25em) {
+    .main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .main .main-card .card-info {
+        margin-top: 2em;
+        justify-content: space-around;
+    }
+    .main .main-card .card-info {
+        padding: 1em;
+    }
+    .main .main-card .time-line .timeline-txt {
+        padding-top: 1em;
+    }
+    .main .img-container img {
+        left: 31em;
+    }
+}
+
+
+/*big-screen*/
+@media screen and (min-width: 74em) {
+    .main {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 'main-card work-card play-card study-card'
+                                'main-card exercies-card social-card selfcare-card';
+        align-items: unset;
+        padding: 5em;
+        gap: 1em;
+    }
+
+    .main .main-card, .main .work-card, .main .study-card, .main .play-card, 
+    .main .exercies-card, .social-card, .selfcare-card {
+        width: 17em;
+    }
+
+    .main .main-card {
+        grid-area: main-card;
+        grid-row: span 2;
+    }
+
+    .main .work-card {
+        grid-area: work-card;
+    }
+
+    .main .play-card {
+        grid-area: play-card;
+    }
+
+    .main .study-card {
+        grid-area: study-card;
+    }
+
+    .main .exercies-card {
+        grid-area: exercies-card;
+    }
+
+    .main .social-card {
+        grid-area: social-card;
+    }
+
+    .main .selfcare-card {
+        grid-area: selfcare-card;
+    }
+
+    .main .card-info {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .main .card-info .current-info h5 {
+        font-size: .7em;
+    }
+
+    .main .card-info .current-info p {
+        font-size: 2.5em;
+        margin-top: .8em;
+    }
+
+    .main .card-info .Previous-info span {
+        top: 1.9em;
+    }
+
+    .main .card-info .Previous-info p {
+        font-size: .7em;
+    }
+
+    .main .main-card .card-info {
+        flex-direction: column;
+        gap: 1em;
+        margin-top: 2em;
+        align-items: start;
+        padding: 2em;
+    }
+    
+    .main .main-card .card-info img {
+        margin: 1em 0 2em;
+    }
+
+    .main .main-card .card-info .text-info p {
+        font-size: .7em;
+    }
+
+    .main .main-card .card-info .text-info h4 {
+        line-height: 1.3;
+        margin-bottom: 1.8em;
+        font-size: 2em;
+    }
+    .main .main-card .time-line .timeline-txt {
+        flex-direction: column;
+        gap: 1em;
+        align-items: start;
+        padding-top: 0;
+    }
+
+    .main .img-container {
+        height: 30%;
+    }
+
+    .main .img-container img {
+        left: 11em;
+        bottom: .4em;
+    }
+}
+
+
+.attribution {
+    font-size: .9em;
+    text-align: center; 
+    padding-bottom: 1.3em;
+}
