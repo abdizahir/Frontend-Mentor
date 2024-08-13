@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font: "Space Mono", monospace;
+    --Strong-cyan: hsl(172, 67%, 45%);
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Space Mono", monospace;
+    background-color: var(--Light-grayish-cyan);
+    color: var(--Grayish-cyan);
+}
+
+img {
+    max-inline-size: 100%;
+    block-size: auto;
+    max-width: 100%;
+}
+
+.heading {
+    padding: 2em;
+    text-align: center;
+}
+
+.heading h4 {
+    text-align: center;
+    color: var(--Very-dark-cyan);
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.main {
+    background-color: var(--White);
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.main  .bill, .main  .input .people-container {
+    position: relative;
+}
+
+.main  .input .bill label {
+    font-size: .9em;
+    font-weight: 600;
+    margin-bottom: .6em;
+    color: var(--Dark-grayish-cyan);
+}
+
+.main  .input .bill input, 
+.main  .input .people-container input, .main  .output input{
+    background-color: var(--Very-light-grayish-cyan);
+    padding: .6em;
+    border-radius: .7em;
+    border: none;
+    position: relative;
+    text-align: right;
+    font-size: 1.1em;
+    font-family: var(--font);
+    width: 100%;
+    z-index: 1;
+    color: var(--Very-dark-cyan);
+    font-size: 1.3em;
+    font-weight: 800;
+    outline-color: var(--Strong-cyan);
+}
+
+.main  .output input {
+    background-color: hsl(172deg 67% 45% / 25%);
+    text-align: center;
+    border-radius: .3em;
+    margin-top: 1em;
+    color: var(--Very-dark-cyan);
+}
+
+.main  .input .bill::before {
+    content: url(/images/icon-dollar.svg);
+    top: 3em;
+}
+
+.main  .input .people-container::before {
+    content: url(/images/icon-person.svg);
+    top: 1.5em;
+}
+
+.main  .input .bill::before, 
+.main  .input .people-container::before {
+    left: 1em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.main  .input .error {
+    position: relative;
+}
+
+.main  .input .error::after {
+    content: 'Cant be zero';
+    position: absolute;
+    color: red;
+    right: 0;
+    top: -2em;
+    z-index: 2;
+}
+
+.main  .input .error input:focus {
+    outline: 1px solid red;
+}
+
+.main  .input .tip h4{
+    margin: 1.3em 0 1em;
+}
+.main  .input .tip .tip-percent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    margin-bottom: 1.3em;
+}
+
+.main  .input .tip .tip-percent .percent-btn, 
+.main  .input .tip .tip-percent .input-custom, 
+#btn-rest {
+    width: 100%;
+	border: none;
+	background-color: var(--Very-light-grayish-cyan);
+	padding: 8px 15px;
+	border-radius: 8px;
+	color: var(--Very-dark-cyan);
+	cursor: pointer;
+    background-color: var(--Very-dark-cyan);
+    font-size: 1.5em;
+    text-align: center;
+    color: var(--Very-light-grayish-cyan);
+    cursor: pointer;
+    font-weight: 600;
+    font-family: "Space Mono", monospace;
+}
+
+.main  .input .tip .tip-percent .percent-btn:hover {
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+#btn-rest {
+    background-color: var(--Strong-cyan);
+    text-align: center;
+    font-weight: 600;
+    border: none;
+}
+
+
+.active {
+    background-color: var(--Light-grayish-cyan);
+    color: var(--Strong-cyan);
+    border: none;
+}
+
+.main  .input .tip .tip-percent .input-custom {
+    color: var(--Very-dark-cyan);
+    outline-color: var(--Strong-cyan);
+    background-color: var(--Very-light-grayish-cyan);
+    width: 100%;
+    font-size: 1em;
+}
+
+.main  .input .people h4{
+    margin-bottom: .5em;
+}
+
+.main  .output {
+    background-color: var(--Very-dark-cyan);
+    color: var(--Very-light-grayish-cyan);
+    padding: 2em 1em 1.3em;
+    margin-top: 2em;
+    border-radius: .8em;
+}
+
+.main  .output .tip-amount, .main  .output .total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+    align-items: center;
+}
+
+.main  .output .tip-amount .tip-txt p, 
+.main  .output .total .tip-txt p{
+    font-size: .6em;
+    color: var(--Light-grayish-cyan);
+}
+
+.main  .output .total .tip-figure span, 
+.main  .output .tip-amount .tip-figure span{
+    font-size: 2.2em;
+    font-weight: 800;
+    color: var(--Strong-cyan);
+    position: relative;
+    left: -.2em;
+}
+.main  .output .total .tip-figure img, 
+.main  .output .tip-amount .tip-figure img {
+    color: var(--Strong-cyan);
+}
+
+.attribution {
+    padding: 1em 0;
+    font-size: .9em;
+    text-align: center;
+}
+
+
+@media screen and (min-width: 49em){
+    .main {
+        flex-direction: row;
+        justify-content: center;
+        gap: 2em;
+        align-items: center;
+        width: 46em;
+        height: 25em;
+        margin: auto;
+        padding: 1.5em;
+        border-radius: .9em;
+    }
+
+    .main .input .tip .tip-percent {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .main .input .bill input, .main .input .people-container input, .main .output input {
+        padding: .4em;
+        border-radius: .2em;
+    }
+
+
+    .main .input .tip .tip-percent .input-custom::placeholder {
+        color: var(--Very-dark-cyan);
+    }
+
+    .main .output {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    #btn-rest {
+        margin-top: 3em;
+        padding: .3em 0;
+        opacity: .2;
+    }
+
+    #btn-rest:hover {
+        background-color: var(--Strong-cyan);
+        opacity: 1;
+    }
+
+}
