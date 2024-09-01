@@ -76,5 +76,5 @@ main article ul li.active {
     }
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { font-size: 11px; text-align: center; color: #fff;}
+.attribution a { color: var(--Orange); }
