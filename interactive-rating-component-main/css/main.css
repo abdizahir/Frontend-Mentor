@@ -30,6 +30,7 @@ main article .pra {
 main article ul li {
     background-color: var(--Light-Grey-t);
     color: rgba(255,255,255,.5)!important;
+    cursor: pointer;
 }
 
 main article .submit-btn {
