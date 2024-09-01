@@ -1,0 +1,79 @@
+:root {
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Light-Grey-t: hsl(217deg 12% 63% / 7%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);    
+}
+
+body {
+    font-family: "Overpass", sans-serif;
+    background-color: var(--Very-Dark-Blue);
+}
+
+main {
+    background-color: var(--Dark-Blue);
+    margin: 150px 20px;
+    border-radius: 1rem;
+}
+
+.img {
+    background-color: var(--Light-Grey-t);
+    width: fit-content;
+}
+
+main article .pra {
+    font-size: .9rem;
+}
+
+main article ul li {
+    background-color: var(--Light-Grey-t);
+    color: rgba(255,255,255,.5)!important;
+}
+
+main article .submit-btn {
+    background-color: var(--Orange);
+}
+
+main article .submit-btn:hover {
+    background-color: #fff;
+    color: black;
+}
+
+main article ul li:hover {
+    background-color: var(--Orange);
+    color: #000;
+}
+
+main article ul li.active {
+    background-color: var(--Orange);
+    color: #000;
+}
+.thank-you {
+    border-radius: 1rem;
+}
+
+.thank-you p {
+    color: var(--Orange);
+    width: fit-content;
+    margin: auto;
+}
+
+
+@media screen and (min-width: 544px) {
+    .rate {
+        width: 23rem;
+        height: 24em;
+        
+        margin: 5rem auto 2rem;
+    }
+    .thank-you {
+        width: 23rem;
+        height: 26em;
+        margin: 5rem auto 2rem;
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
