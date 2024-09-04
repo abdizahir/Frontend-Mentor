@@ -2,25 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
   <title>Frontend Mentor | FAQ accordion</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  
-  
-  <div class="attribution">
+  <main>
+    <!-- <img class="img-mobile" src="assets/images/background-pattern-mobile.svg" alt=""> -->
+    <img class="img-fluid position-absolute top-0 start-0" src="assets/images/background-pattern-desktop.svg" alt="">
+    <article class="main-article bg-white rounded  position-relative z-1">
+      <header class="d-flex gap-2 align-items-center mb-3">
+        <img class="fs-1" src="assets/images/icon-star.svg" alt="">
+        <h2 class="fs-1  fw-bold">FAQs</h2>
+      </header>
+      <article>
+        <div class="faq">
+          <div class="div d-flex mb-3 justify-content-between align-items-center my-4">
+            <h5 class="fw-bold">What is Frontend Mentor, and how will it help me?</h5>
+            <img class="plus" src="assets/images/icon-plus.svg" alt="plus">
+            <img class="minus minus1 d-none" src="assets/images/icon-minus.svg" alt="minus">
+          </div>
+          <p class="pra fs-6 text-black-50 d-none">Frontend Mentor offers realistic coding challenges to help developers improve their 
+            frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for 
+            all levels and ideal for portfolio building.</p>
+        </div>
+        <hr>
+        <div class="faq">
+          <div class="div d-flex mb-3 justify-content-between align-items-center my-4">
+            <h5 class="fw-bold">Is Frontend Mentor free?</h5>
+            <img class="plus" src="assets/images/icon-plus.svg" alt="plus">
+            <img class="minus d-none" src="assets/images/icon-minus.svg" alt="minus">
+          </div>
+          <p class="pra p-two text-black-50 d-none">  Yes, Frontend Mentor offers both free and premium coding challenges, with the free 
+            option providing access to a range of projects suitable for all skill levels.</p>
+        </div>
+        <hr>
+        <div class="faq">
+          <div class="div d-flex mb-3 justify-content-between align-items-center my-4">
+            <h5 class="fw-bold">Can I use Frontend Mentor projects in my portfolio?</h5>
+            <img class="plus" src="assets/images/icon-plus.svg" alt="plus">
+            <img class="minus d-none" src="assets/images/icon-minus.svg" alt="minus">
+          </div>
+          <p class="pra p-three text-black-50 d-none">Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
+            way to showcase your skills to potential employers!</p>
+        </div>
+        <hr>
+        <div class="faq">
+          <div class="div d-flex mb-3 justify-content-between align-items-center my-4">
+            <h5 class="fw-bold">How can I get help if I'm stuck on a challenge?</h5>
+            <img class="plus" src="assets/images/icon-plus.svg" alt="">
+            <img class="minus d-none" src="assets/images/icon-minus.svg" alt="">
+          </div>
+          <p class="pra p-four text-black-50 d-none">The best place to get help is inside Frontend Mentor's Discord community. There's a help 
+            channel where you can ask questions and seek support from other community members.</p>
+        </div>
+      </article>
+    </article>
+  </main>  
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    Coded by <a href="#">Abdizahir</a>.
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Light-pink: hsl(275, 100%, 97%);
+    --Grayish-purple: hsl(292, 16%, 49%);
+    --Dark-purple: hsl(292, 42%, 14%);
+    --bright-purple: hsl(281, 83%, 54%);
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+    background-color: var(--Light-pink);
+}
+
+main .img-desktop {
+    display: none;
+}
+
+.faq div h5 {
+    font-size: 1rem;
+}
+
+.faq div h5:hover {
+    color: var(--Grayish-purple);
+    cursor: pointer;
+}
+
+.faq div img {
+    cursor: pointer;
+}
+
+hr {
+    background-color: var(--Light-pink);
+    margin: 1rem 0;
+}
+
+@media screen and (min-width: 375px) {
+    main .main-article{
+        width: 550px;
+        padding: 3rem 3rem 1rem;
+        margin: 7rem auto 0;
+    }
+}
+
+
+.attribution { 
+    font-size: 12px; 
+    text-align: center; 
+    margin: 1rem auto;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
