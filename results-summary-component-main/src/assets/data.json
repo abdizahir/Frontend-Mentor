@@ -1,0 +1,44 @@
+{
+  "results": [
+    {
+      "id": 1,
+      "class": "one",
+      "category": "Reaction",
+      "score": 80,
+      "icon": "icon-reaction.svg",
+      "alt": "Reaction Image",
+      "textColor": "$lightRed",
+      "bgColor": "$lightRed1"
+    },
+    {
+      "id": 2,
+      "class": "two",
+      "category": "Memory",
+      "score": 92,
+      "icon": "icon-memory.svg",
+      "alt": "Memory Image",
+      "textColor": "$orangeyYellow",
+      "bgColor": "$orangeyYellow1"
+    },
+    {
+      "id": 3,
+      "class": "three",
+      "category": "Verbal",
+      "score": 61,
+      "icon": "icon-verbal.svg",
+      "alt": "Verbal Image",
+      "textColor": "$greenTea",
+      "bgColor": "$greenTeal"
+    },
+    {
+      "id": 4,
+      "class": "four",
+      "category": "Visual",
+      "score": 72,
+      "icon": "icon-visual.svg",
+      "alt": "Visual Image",
+      "textColor": "$cobaltBlue",
+      "bgColor": "$cobaltBlue1"
+    }
+  ]
+}
